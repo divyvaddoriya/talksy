@@ -1,1 +1,1 @@
-export const BaseUrl = 'https://talksy-0feq.onrender.com/';
+export const BaseUrl = 'https://talksy-0feq.onrender.com';
