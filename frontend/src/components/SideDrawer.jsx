@@ -21,7 +21,7 @@ import {
   useToast,
   Spinner,
 } from "@chakra-ui/react";
-import { Bell, Search, User, User2 } from "lucide-react";
+import { Bell, BinaryIcon, Search, User, User2 } from "lucide-react";
 import  { useState } from "react";
 import { RiNotificationBadgeFill, RiNotificationBadgeLine, RiProfileFill } from "react-icons/ri";
 import ProfileModal from "./ProfileModal";
@@ -169,18 +169,36 @@ const SideDrawer = () => {
         <Box borderRadius={"1"} borderColor={"white"}>
           <Menu bg="black" textColor="white">
             <MenuButton p={"2"}>
-              {/* <BiNotification repeatCount={notification.length}/> */}
-              <Bell />
+              {/* <BinaryIcon repeatCount={notification.length}/> */}
+             
+              <Bell  />
+               {notification.length > 0 && (
+    <Box
+      position="absolute"
+      bg="red"
+      top={"1"}
+      color="white"
+      fontSize="xs"
+      borderRadius="full"
+      width="18px"
+      height="18px"
+      display="flex"
+      alignItems="center"
+      justifyContent="center"
+    >
+      {notification.length}
+    </Box>
+  )}
             </MenuButton>
 
-             <MenuList pl={2} >
+             <MenuList pl={2} bg={"black"} textColor={"white"} >
               {!notification.length && "No new Messages"}
               {notification.map((notif) =>(
-                <MenuItem key={notif._id} onClick={()=>{
+                <MenuItem bg={"black"} textColor={"white"} key={notif._id} onClick={()=>{
                   setSelectedChat(notif.chat);
-                  setNotification(notification.filter((n) => n!==notif));
+                  setNotification(( notification ) => notification.filter((n) => n!==notif));
                 }}>
-                  {notif.chat.isGroupChat?`New Message in ${notif.chat.chatName}` : `New Message From ${getSender(user , notif.chat.users)}`}
+                  {notif.chat.isGroupChat? `New Message in ${notif.chat.chatName}` : `New Message From ${getSender(user , notif.chat.users)}`}
                 </MenuItem>
               ))}
              </MenuList>

@@ -28,14 +28,7 @@ const MyChats = ({fetchAgain}) => {
       console.log(data);
       
       setChats(data);
-        toast({
-        title: "Chat loadded!",
-        description: " Loading chat succesfully",
-        status: "success",
-        duration: 2000,
-        isClosable: true,
-        position: "top-left"
-      });
+       
     } catch (error) {
       toast({
         title: "Error Occured!",

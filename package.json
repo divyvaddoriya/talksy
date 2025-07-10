@@ -1,0 +1,14 @@
+{
+  "name": "talksy-monorepo",
+  "version": "1.0.0",
+   "type": "module",
+  "scripts": {
+    "install:all": "npm --prefix frontend install && npm --prefix backend install",
+    "dev": "concurrently \"npm --prefix backend run dev\" \"npm --prefix frontend run dev\"",
+    "build": "npm i && npm i --prefix frontend && npm run build --prefix frontend",
+    "start": "node backend/index.js"
+  },
+  "devDependencies": {
+    "concurrently": "^8.2.0"
+  }
+}
