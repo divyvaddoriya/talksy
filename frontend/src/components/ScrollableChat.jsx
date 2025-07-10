@@ -1,5 +1,5 @@
 import { isLastMessage, isSameSender, isSameSenderMargin } from '@/config/chatlogic'
-import { ChatState } from '@/context/chatProvider'
+import { ChatState } from "@/context/ChatProvider";
 import { Avatar, Tooltip } from '@chakra-ui/react'
 import React from 'react'
 import ScrollableFeed from './ScrollableFeed'

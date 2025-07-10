@@ -1,4 +1,4 @@
-import { ChatState } from '@/context/chatProvider'
+import { ChatState } from '@/context/ChatProvider'
 import { Box } from '@chakra-ui/react';
 import React from 'react'
 import SingleChat from './SingleChat';

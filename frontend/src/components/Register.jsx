@@ -6,7 +6,7 @@ import { useToast } from "@chakra-ui/react";
 import { useState } from "react";
 import axios from "axios";
 import { Navigate, useNavigate } from "react-router-dom";
-import { ChatState } from "@/context/chatProvider";
+import { ChatState } from "@/context/ChatProvider";
 const Register = () => {
   const [show, setShow] = useState(false);
   const handleClick = () => setShow(!show);

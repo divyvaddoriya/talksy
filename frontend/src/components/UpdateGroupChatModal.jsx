@@ -19,7 +19,7 @@ import {
 } from "@chakra-ui/react";
 import axios from "axios";
 import { useEffect, useState } from "react";
-import { ChatState } from "@/context/chatProvider";
+import { ChatState } from "@/context/ChatProvider";
 import UserBadgeItem from "./UserBadgeItem";
 import UserListItem from "./UserListItem";
 

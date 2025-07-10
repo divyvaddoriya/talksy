@@ -1,5 +1,5 @@
 import { getSender, getSenderFull } from '@/config/chatlogic';
-import { ChatState } from '@/context/chatProvider';
+import { ChatState } from "@/context/ChatProvider";
 import {
   Box, FormControl, IconButton, Input, Spinner,
   Text, useToast

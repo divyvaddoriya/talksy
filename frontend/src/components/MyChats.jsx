@@ -4,7 +4,7 @@ import { Box, Button, Stack, Text, useToast } from '@chakra-ui/react';
 import ChatLoading from './ChatLoading';
 import { getSender } from '@/config/chatlogic';
 import { Plus } from 'lucide-react';
-import { ChatState } from '@/context/chatProvider.jsx';
+import { ChatState } from "@/context/ChatProvider";
 import GroupChatModal from './GroupChatModal';
 import { BaseUrl } from '@/constant';
 

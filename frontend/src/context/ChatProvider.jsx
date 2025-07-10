@@ -3,7 +3,7 @@ import { useNavigate } from 'react-router-dom';
 
 const ChatContext = createContext();
 
-const ChatProvider = ({ children }) => {
+export const ChatProvider = ({ children }) => {
   const navigate = useNavigate();
 
   // ✅ Initialize from localStorage immediately (no useEffect needed)

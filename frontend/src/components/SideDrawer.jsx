@@ -1,5 +1,5 @@
 import React from "react";
-import { ChatState } from "@/context/chatProvider";
+import { ChatState } from "@/context/ChatProvider";
 import {
   Button,
   Tooltip,

@@ -3,7 +3,9 @@ import ReactDOM from "react-dom/client"
 import { ChakraProvider, extendTheme, ColorModeScript } from "@chakra-ui/react"
 import { BrowserRouter } from "react-router-dom"
 import App from "./App"
-import ChatProvider from "./context/chatProvider.jsx"
+// import {ChatProvider} from "./context/ChatProvider.jsx"
+// import ChatProvider from "./context/chatProvider"
+import { ChatProvider } from "@/context/ChatProvider";
 import axios from "axios"
 import { BaseUrl } from "./constant.js"
 
