@@ -5,7 +5,7 @@
   "scripts": {
     "install:all": "npm --prefix frontend install && npm --prefix backend install",
     "dev": "concurrently \"npm --prefix backend run dev\" \"npm --prefix frontend run dev\"",
-    "build": "npm i && npm i --prefix frontend && npm run build --prefix frontend",
+    "build": "npm install && npm --prefix frontend install && npm --prefix frontend run build",
     "start": "node backend/index.js"
   },
   "devDependencies": {
