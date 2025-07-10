@@ -4,7 +4,7 @@ import {
   Box, FormControl, IconButton, Input, Spinner,
   Text, useToast
 } from '@chakra-ui/react';
-import { ArrowBigLeftIcon } from 'lucide-react';
+import { ArrowBigLeftIcon, Loader2 } from 'lucide-react';
 import React, { useEffect, useState, useRef } from 'react';
 import ProfileModal from './ProfileModal';
 import UpdateGroupChatModal from './UpdateGroupChatModal';
@@ -12,21 +12,11 @@ import axios from 'axios';
 import ScrollableChat from './ScrollableChat';
 import io from 'socket.io-client';
 import { BaseUrl } from '@/constant';
-import Lottie from 'react-lottie';
-import typingAnimation from "../assets/lottie.json";
 
 const SingleChat = ({ fetchAgain, setFetchAgain }) => {
   const socket = useRef(null);
   const selectedChatCompare = useRef();
 
-  const defaultOptions = {
-    loop: true,
-    autoplay: true,
-    animationData: typingAnimation,
-    rendererSettings: {
-      preserveAspectRatio: "xMidYMid slice"
-    }
-  };
 
   const [messages, setMessages] = useState([]);
   const [loading, setLoading] = useState(false);
@@ -230,7 +220,8 @@ const SingleChat = ({ fetchAgain, setFetchAgain }) => {
 
               {isTyping && (
                 <div>
-                  <Lottie options={defaultOptions} width={70} height={50} style={{ marginBottom: 15 , marginLeft: 1}} />
+                  
+                  <Loader2 />
                 </div>
               )}
             <FormControl bg={"black"} textColor={"white"} onKeyDown={sendMessage} isRequired mt={3}>

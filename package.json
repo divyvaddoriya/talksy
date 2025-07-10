@@ -7,8 +7,7 @@
   "type": "module",
   "main": "index.js",
   "scripts": {
-    "install:all": "npm --prefix frontend install && npm install",
-    "build": "npm install && npm run install:all && npm --prefix frontend run build ",
+    "build": "npm install  --legacy--peer-deps && npm install --legacy--peer-deps --prefix frontend  && npm run build --prefix frontend",
     "start": "node backend/index.js"
   },
   "dependencies": {
