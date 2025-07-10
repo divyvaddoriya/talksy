@@ -7,6 +7,7 @@ import { useState } from "react";
 import axios from "axios";
 import { Navigate, useNavigate } from "react-router-dom";
 import { ChatState } from "@/context/ChatProvider";
+import { BaseUrl } from "@/constant";
 const Register = () => {
   const [show, setShow] = useState(false);
   const handleClick = () => setShow(!show);
@@ -56,7 +57,7 @@ const Register = () => {
         },
       };
 const  {data} = await axios.post(
-        "/api/user",
+        `${BaseUrl}/api/user`,
         {
           name,
           email,
