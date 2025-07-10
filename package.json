@@ -1,14 +1,26 @@
 {
-  "name": "talksy-monorepo",
+  "name": "backend",
   "version": "1.0.0",
-   "type": "module",
+  "description": "",
+  "license": "ISC",
+  "author": "",
+  "type": "module",
+  "main": "index.js",
   "scripts": {
-    "install:all": "npm --prefix frontend install && npm --prefix backend install",
-    "dev": "concurrently \"npm --prefix backend run dev\" \"npm --prefix frontend run dev\"",
-    "build": "npm install && npm --prefix frontend install && npm --prefix frontend run build",
+    "install:all": "npm --prefix frontend install && npm install",
+    "build": "npm install && npm run install:all && npm --prefix frontend run build ",
     "start": "node backend/index.js"
   },
-  "devDependencies": {
-    "concurrently": "^8.2.0"
+  "dependencies": {
+    "bcryptjs": "^3.0.2",
+    "cors": "^2.8.5",
+    "dotenv": "^16.5.0",
+    "express": "^5.1.0",
+    "express-async-handler": "^1.2.0",
+    "jsonwebtoken": "^9.0.2",
+    "mongodb": "^6.17.0",
+    "mongoose": "^8.16.0",
+    "nodemon": "^3.1.10",
+    "socket.io": "^4.8.1"
   }
 }
